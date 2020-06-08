@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.skimmiatest.model.User" alias="User"/>
+
+        <variable
+            name="user"
+            type="User" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/foto_perfil"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_launcher_background"
+                    android:src="@drawable/ic_launcher_foreground"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/nombre_corto_perfil"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{user.username}"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_nombre"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre"/>
+
+                    <EditText
+                        android:layout_marginTop="30dp"
+                        android:padding="15dp"
+                        android:inputType="text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@{user.nombre}"
+                        android:textColor="@color/colorAccent"
+                        android:enabled="false"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apellido"/>
+
+                    <EditText
+                        android:layout_marginTop="30dp"
+                        android:padding="15dp"
+                        android:inputType="text"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@{user.apellido}"
+                        android:textColor="@color/colorAccent"
+                        android:enabled="false"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorAccent"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/biografia"/>
+
+                    <EditText
+                        android:layout_marginTop="30dp"
+                        android:padding="15dp"
+                        android:id="@+id/et_nombre"
+                        android:inputType="textImeMultiLine"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:hint="@{user.biografia}"
+                        android:textColor="@color/colorAccent"
+                        android:enabled="false"
+                        tools:ignore="Autofill,LabelFor" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

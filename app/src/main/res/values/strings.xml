@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SkimmiaTest</string>
+    <string name="default_notification_channel_id">default_channel</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="profile">Mi perfil</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="biografia">Biografia</string>
+</resources>
